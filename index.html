@@ -23,7 +23,9 @@
     
     <div class="firstthing">
         
-            <h1>A Very Phishy Trivia Game</h1>
+            <h1>"Something's Phishy": <br>
+                A Very Phishy Trivia Game <br>
+                Regarding the Band Phish</h1>
     </div>
     <div class="treypic">
     <img src="assets/images/phishfood.jpeg" alt="happy trey" height="70" width="70">
@@ -36,31 +38,41 @@
 <br>
 <br>
 
-<div id="countingDown"></div>
+
 <div id="scoreBoard">
     <div id="congrats"></div>
     <div id="correct"></div>
+    <div id="incorrect"></div>
     <div id="unanswered"></div>
     <div id="extra"></div>
 </div>
+
 <div id="quiz">
     <header id="intro">
-        <h1> Lets test your Phish knowledge</h1>
-        <p>
-            A useless quiz testing your knowledge of the greatest live band of our time.
+        <h1> Lets get down to the nitty gritty, 
+            <br> let's get this show on the road. </h1>
+        <p id="rules">
+            <br> The rules are simple:
+            <br> When you click the <strong>BLUE</strong> start button below, you will have 30 seconds to answer 5 questions 
+            <br> about the greatest touring rock band in the world.
+            <br> When you are all done, click the <strong> GREEN </strong>button at the bottom to see how you did!
         </p>
 
     </header>
 
-    <button type="button" class="btn-primary"  name="Starting Game" id="startButton"> Click me to start a new game! </button>
+    <button type="button" class="btn-primary"  name="Starting Game" id="startButton"> I am a button! <br>
+        Click me to start a new game! </button>
+
+        <div id="countingDown"></div>
 
     <section class="quizform" onsubmit="return submitAnswers()">
         <div class ="q1">
-        <h3> 1. In which city did Phish play a 40+ minute Tweezer? </h3>
-        <input type="radio" name="q1" value="a" id="q1a"> a. Chicago <br>
-        <input type="radio" name="q1" value="b" id="q1b"> b. Tahoe <br>
-        <input type="radio" name="q1" value="c" id="q1c"> c. Los Angeles <br>
-        <input type="radio" name="q1" value="d" id="q1d"> d. Boston <br>
+        <h3> 1. Which legendary rocker was so impressed by Phish that 
+            <br> he asked them to be backing moving forward. </h3>
+        <input type="radio" name="q1" value="a" id="q1a"> a. Tom Petty (replacing the Heartbrakers) <br>
+        <input type="radio" name="q1" value="b" id="q1b"> b. Neil Young (replacing Crazy Horse) <br>
+        <input type="radio" name="q1" value="c" id="q1c"> c. Joan Jett (replacing the Blackhearts)<br>
+        <input type="radio" name="q1" value="d" id="q1d"> d. Prince (replacing the Revolution) <br>
         <br>
         </div>
 
@@ -82,7 +94,8 @@
         <input type="radio" name="q4" value="c" id="q4c"> c. 45 <br>
         <input type="radio" name="q4" value="d" id="q4d"> d. 56 <br>
         <br>
-        <h3> 5. Over a 13 show residency at Madison Square Garden in 2017, how many times did Phish repeat the same song? </h3>
+        <h3> 5. Over a 13 show residency at Madison Square Garden in 2017, 
+            <br> how many times did Phish repeat the same song? </h3>
         <input type="radio" name="q5" value="a" id="q5a"> a. 0 <br>
         <input type="radio" name="q5" value="b" id="q5b"> b. 1 <br>
         <input type="radio" name="q5" value="c" id="q5c"> c. 3 <br>
@@ -94,7 +107,9 @@
         
     </section>
 </div>
-<button type="button"  class="btn-primary" name="Submit Game" id="submitButton"> I am a button. Click when Done!!  </button>
+<button type="button"  class="btn-success" name="Submit Game" id="submitButton"> I am a button. 
+    <br> Click when Done!! 
+    <br> (And scroll back up to see how you did!</button>
 
 <script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
