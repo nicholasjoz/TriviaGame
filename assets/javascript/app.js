@@ -7,7 +7,10 @@ var userChoice3= "";
 var userChoice4= "";
 var userChoice5= "";
 var unanswered= 0;
-var timeRemains=20;
+var timeRemains=30;
+
+
+// still cant get the radio buttons to clear when resettings game!!
 
 //PSEUDOCODE/LAyout: Needed Functions
 // radio button functionality to only allow 1 click at a time
@@ -27,7 +30,13 @@ function clearGame (){
         $('#countingDown').empty();
         $('#congrats').empty();
         $('#correct').empty();
+        $('#congrats').empty();
         $('#unanswered').empty();
+        $('input[name=q1]').prop('checked', false);
+        $('input[name=q2]').prop('checked', false);
+        $('input[name=q3]').prop('checked', false);
+        $('input[name=q4]').prop('checked', false);
+        $('input[name=q5]').prop('checked', false);
         unanswered = 0;
         score = 0;
         timeRemains=20
@@ -55,6 +64,12 @@ function endGame(){
 $("#congrats").text("Congrats on finishing the game!");
 $("#correct").text("You answered " + score + " out of " + totalQ + " correctly!");
 $("#unanswered").text("You left " + unanswered + " question unanswered.");
+if (score <=3) {
+    $("#extra").text("Honestly, if this was a test you would have failed. That was pathetic.");
+}
+else if (score>3){
+    $("#extra").text("Wow, you did great! You must be a hippie or something...");
+}
 }
 
 function checkComplete(){
@@ -113,6 +128,7 @@ $("#submitButton").on("click", function() {
     checkComplete();
     checkAnswers();
     endGame();
+    clearInterval(time);
 })
 
 

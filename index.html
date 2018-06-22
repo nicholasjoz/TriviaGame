@@ -20,11 +20,15 @@
 </head>
 
 <body>
+    
     <div class="firstthing">
-            <h1>Very Phishy Trivia</h1>
+        
+            <h1>A Very Phishy Trivia Game</h1>
     </div>
     <div class="treypic">
+    <img src="assets/images/phishfood.jpeg" alt="happy trey" height="70" width="70">
     <img src="assets/images/trey.jpeg" alt="happy trey" height="400" width="600">
+    <img src="assets/images/phishfood.jpeg" alt="happy trey" height="70" width="70">
 </div>
 <br>
 <br>
@@ -37,6 +41,7 @@
     <div id="congrats"></div>
     <div id="correct"></div>
     <div id="unanswered"></div>
+    <div id="extra"></div>
 </div>
 <div id="quiz">
     <header id="intro">
@@ -50,13 +55,14 @@
     <button type="button" class="btn-primary"  name="Starting Game" id="startButton"> Click me to start a new game! </button>
 
     <section class="quizform" onsubmit="return submitAnswers()">
-
+        <div class ="q1">
         <h3> 1. In which city did Phish play a 40+ minute Tweezer? </h3>
         <input type="radio" name="q1" value="a" id="q1a"> a. Chicago <br>
         <input type="radio" name="q1" value="b" id="q1b"> b. Tahoe <br>
         <input type="radio" name="q1" value="c" id="q1c"> c. Los Angeles <br>
         <input type="radio" name="q1" value="d" id="q1d"> d. Boston <br>
         <br>
+        </div>
 
         <h3> 2. Which David Bowie album did Phish cover in its entirety for Halloween 2016? </h3>
         <input type="radio" name="q2" value="a" id="q2a"> a. Ziggy Stardust <br>
@@ -83,11 +89,12 @@
         <input type="radio" name="q5" value="d" id="q5d"> d. 5 <br>
         <br>
 
-        <button type="button"  name="Submit Game" id="submitButton"> Click when Done!!  </button>
+       
 
         
     </section>
 </div>
+<button type="button"  class="btn-primary" name="Submit Game" id="submitButton"> I am a button. Click when Done!!  </button>
 
 <script type="text/javascript" src="assets/javascript/app.js"></script>
 </body>
