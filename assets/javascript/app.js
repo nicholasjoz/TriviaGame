@@ -6,8 +6,8 @@ var userChoice2= "";
 var userChoice3= "";
 var userChoice4= "";
 var userChoice5= "";
-var unanswered= 5;
-var timeRemains=5;
+var unanswered= 0;
+var timeRemains=20;
 
 //PSEUDOCODE/LAyout: Needed Functions
 // radio button functionality to only allow 1 click at a time
@@ -19,8 +19,19 @@ var timeRemains=5;
 //it to a functional state for turn-in
 
 $("#startButton").on("click", function (){
+    clearGame();
     time= setInterval(countDown, 1000)
 })
+
+function clearGame (){
+        $('#countingDown').empty();
+        $('#congrats').empty();
+        $('#correct').empty();
+        $('#unanswered').empty();
+        unanswered = 0;
+        score = 0;
+        timeRemains=20
+    }
 
 function countDown(){
     timeRemains--;
@@ -29,22 +40,21 @@ function countDown(){
     if (timeRemains <1){
         clearInterval(time);
         checkAnswers();
-        endGame();
         outofTime();
-
+        endGame();
     }
 }
 
 // must figure out how to stop timer at 0
 
-
+//clear game function
 
 
 
 function endGame(){
 $("#congrats").text("Congrats on finishing the game!");
 $("#correct").text("You answered " + score + " out of " + totalQ + " correctly!");
-$("#unanswered").text("You left " + unanswered + " unanswered questions.");
+$("#unanswered").text("You left " + unanswered + " question unanswered.");
 }
 
 function checkComplete(){

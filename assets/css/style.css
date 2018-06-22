@@ -8,14 +8,25 @@
 
 .firstthing {
     text-align: center;
-    border: 3px solid green;
+    border: 3px solid white;
+    color: aliceblue;
     padding:40px;
     margin-bottom:40px;
-
+    font-family: "Times New Roman";
+    font-weight: bolder
 }
+
+body {
+    background-image: url("../images/background5.png")
+}
+
 
 #intro {
     text-align:center;
+}
+
+#quiz {
+    color: aliceblue;
 }
 
 #startButton {
@@ -40,4 +51,5 @@
     border: 3px solid green;
     padding:40px;
     margin-bottom:40px;
+    color: aliceblue;
  }
