@@ -30,7 +30,7 @@ function clearGame (){
         $('#countingDown').empty();
         $('#congrats').empty();
         $('#correct').empty();
-        $('#congrats').empty();
+        $('#extra').empty();
         $('#unanswered').empty();
         $('input[name=q1]').prop('checked', false);
         $('input[name=q2]').prop('checked', false);
@@ -39,7 +39,7 @@ function clearGame (){
         $('input[name=q5]').prop('checked', false);
         unanswered = 0;
         score = 0;
-        timeRemains=20
+        timeRemains=30
     }
 
 function countDown(){
